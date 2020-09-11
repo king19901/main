@@ -43,7 +43,7 @@ body{
 .wrapper .header .header-menu .sidebar-btn{
   color: #fff;
   position: absolute;
-  margin-left: 240px;
+  margin-left: 210px;
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;
@@ -177,7 +177,7 @@ body{
   margin-top: 70px;
   margin-left: 250px;
   padding: 15px;
-  background: url(background.jpg)no-repeat;
+  background: url(images/background.jpg)no-repeat;
   background-size: cover;
   height: 100vh;
   transition: 0.3s;
