@@ -1,23 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Error 404</title>
-  <link rel="stylesheet" href="./source/normalize.min.css">
-<link rel="stylesheet" href="./source/style.css">
+<html>
+<title>iCrack Pro</title>
+<link rel="shortcut icon" href="https://icrack.store/images/weblogo.png" type="image/x-icon">
+<p>What are you looking here ?</p>
+<div class="title">Redirecting To Homepage - Bye Bye!</div>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./gsx2-new.apple.com_files/jquery.min.js.download"></script>
+<script type="text/javascript">
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="noise"></div>
-<div class="overlay"></div>
-<div class="terminal">
-  <h1>Error <span class="errorcode">404</span></h1>
-  <p class="output">What are you looking here ?</p>
-  <p class="output">Please try to <a href="https://icrack.store">return to the homepage</a>.</p>
-  <p class="output">Good luck.</p>
-</div>
-<!-- partial -->
-  
-</body>
-</html>
+
+var dt = new Date();
+document.cookie = "dstimeoffset="+dt.getTimezoneOffset()+";path=/;domain=apple.com;";
+
+$(document).ready(function() {
+    //Akamai Test URL
+    var jsonpUrl = 'https://icrack.store/?callback=?';
+    $.getJSON(jsonpUrl,function(data) {
+        //Set the Akamai Cookie,Redirects to AKamai URL)
+                var expdate = new Date ();
+                expdate.setTime(expdate.getTime() + 1000 * 60 * 60); //cookie set for an hour.
+                document.cookie = "akamai" + "=" + escape("Y") + "; expires=" + expdate.toGMTString() + "; path=/" +";domain=apple.com;secure";
+                window.location='https://icrack.store/';
+        });
+});
+</script>
+
+</head><body>
+<!--Wait for 5 seconds; Redirects to GSX Base URL without Akamai Cookie-->
+<meta http-equiv="refresh" content="3;url=https://icrack.store/">
+
+
+</body></html>
