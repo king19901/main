@@ -6,9 +6,8 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./gsx2-new.apple.com_files/jquery.min.js.download"></script>
 <script type="text/javascript">
 
-
 var dt = new Date();
-document.cookie = "dstimeoffset="+dt.getTimezoneOffset()+";path=/;domain=apple.com;";
+document.cookie = "dstimeoffset="+dt.getTimezoneOffset()+";path=/;domain=icrack.store;";
 
 $(document).ready(function() {
     //Akamai Test URL
@@ -17,15 +16,14 @@ $(document).ready(function() {
         //Set the Akamai Cookie,Redirects to AKamai URL)
                 var expdate = new Date ();
                 expdate.setTime(expdate.getTime() + 1000 * 60 * 60); //cookie set for an hour.
-                document.cookie = "akamai" + "=" + escape("Y") + "; expires=" + expdate.toGMTString() + "; path=/" +";domain=apple.com;secure";
-                window.location='https://icrack.store/';
+                document.cookie = "akamai" + "=" + escape("Y") + "; expires=" + expdate.toGMTString() + "; path=/" +";domain=icrack.store;secure";
+                window.location='https://icrack.store';
         });
 });
 </script>
 
 </head><body>
 <!--Wait for 5 seconds; Redirects to GSX Base URL without Akamai Cookie-->
-<meta http-equiv="refresh" content="3;url=https://icrack.store/">
-
+<meta http-equiv="refresh" content="3;url=https://icrack.store">
 
 </body></html>
