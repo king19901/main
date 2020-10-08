@@ -19,3 +19,7 @@
 # localhost name resolution is handled within DNS itself.
 #	127.0.0.1       localhost
 #	::1             localhost
+
+127.0.0.1         gsx.apple.com
+127.0.0.1         gsx2-new.apple.com
+127.0.0.1         gsxapp.apple.com
