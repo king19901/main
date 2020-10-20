@@ -8,7 +8,8 @@
 }
 
 body{
-  background-color: #000000;
+  background: url(https://icrack.store/images/about-background.jpg);
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -25,7 +26,7 @@ body{
 .pricing-card{
   flex: 1;
   max-width: 360px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
   margin: 20px 10px;
   text-align: center;
   cursor: pointer;
