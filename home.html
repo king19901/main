@@ -7,6 +7,21 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   <link rel="shortcut icon" href="https://icrack.store/images/weblogo.png" type="image/x-icon">
 	</head>
+	
+<script>
+	window.oncontextmenu = function () {
+				return false;
+			}
+			$(document).keydown(function (event) {
+				if (event.keyCode == 123) {
+					return false;
+				}
+				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+					return false;
+				}
+			});
+</script>
+	
 	<body>
 
 		<!--wrapper start-->
@@ -28,7 +43,7 @@
 			<div class="sidebar">
 				<div class="sidebar-menu">
 					<center class="profile">
-						<img src="profilepic.jpg" alt="">
+						<img src="profile.jpg" alt="">
 						<p>Welcome To iCrack</p>
 					</center>
 					<li class="item">
