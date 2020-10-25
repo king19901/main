@@ -5,7 +5,22 @@
     <title>Welcome To iCrack</title>
     <link rel="shortcut icon" href="https://icrack.store/images/weblogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://icrack.store/source/load.css">
-  </head>	
+  </head>
+  
+<script>
+	window.oncontextmenu = function () {
+				return false;
+			}
+			$(document).keydown(function (event) {
+				if (event.keyCode == 123) {
+					return false;
+				}
+				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+					return false;
+				}
+			});
+</script>
+  
   <body>
 <h1>iCrack</h1>
   </body>
