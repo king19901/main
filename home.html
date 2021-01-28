@@ -8,18 +8,44 @@
   <link rel="shortcut icon" href="https://icrack.in/images/weblogo.png" type="image/x-icon">
 	</head>
 	
-<script>
-	window.oncontextmenu = function () {
-				return false;
-			}
-			$(document).keydown(function (event) {
-				if (event.keyCode == 123) {
-					return false;
-				}
-				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-					return false;
-				}
-			});
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
 </script>
 	
 	<body>
@@ -114,9 +140,8 @@
 					<h4>📢 After Successful Activation Of Tool You Cannot Cancel License</h4>
 				</div>
 				<div class="card">
-					<h3>Passcode / Disabled / Open Menu (Checkra1n Supported iDevice Only)</h3>
-					<a href="https://t.me/iCrackPro"></i><span>Find My iPhone OFF (iOS 13+)</span></a>
-					<p>Price : 12$ Only</p>
+					<h3>100% FREE iCloud Bypass With Carrier (NO-MEID - Checkra1n Jailbreak Devices Only)</h3>
+					<a href="https://t.me/iCrackOfficial"></i><span>Click Here</span></a>
 				</div>
 			</div>
 			<!--main container end-->
