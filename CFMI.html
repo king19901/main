@@ -1,0 +1,51 @@
+<html lang="en-US">
+<meta charset="UTF-8">
+<title>Private FMI Checker</title>
+<link rel="shortcut icon" href="https://icrack.in/images/weblogo.png" type="image/x-icon">
+
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+
+<body> 
+<p style="text-align: center;">.::THANKS TO IDEVICEHACKS::.</p>
+<p align="center"><iframe style="-webkit-transform: scale(1);" src="https://imei.idevicehacks.com/demo.php" width="600" height="580" scrolling="no" align="centre">
+
+</body>
+</html>
