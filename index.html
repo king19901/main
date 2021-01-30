@@ -1,30 +1,56 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0;url=https://icrack.in/home">
+    <meta http-equiv="refresh" content="3;url=https://icrack.in/home">
     <title>Welcome To iCrack</title>
-    <link rel="shortcut icon" href="https://icrack.in/images/weblogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://icrack.in/source/load.css">
+    <link rel="shortcut icon" href="preloader/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="preloader/style.css">
   </head>
   
-<script>
-	window.oncontextmenu = function () {
-				return false;
-			}
-			$(document).keydown(function (event) {
-				if (event.keyCode == 123) {
-					return false;
-				}
-				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-					return false;
-				}
-			});
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
 </script>
   
   <body>
 <h1>iCrack</h1>
   </body>
 <p hidden>
-6B72F231A32A7A692F274148E26567C7
+iCrack
 </p>
 </html>
