@@ -60,11 +60,11 @@ body{
 }
 
 .wrapper .header .header-menu ul li a{
-  background: #fff;
-  color: #000;
+  background: #22242a;
+  color: #fff;
   display: block;
-  margin: 0 10px;
-  font-size: 18px;
+  margin: 10px;
+  font-size: 25px;
   width: 34px;
   height: 34px;
   line-height: 35px;
@@ -75,8 +75,8 @@ body{
 }
 
 .wrapper .header .header-menu ul li a:hover{
-  background: #4CCEE8;
-  color: #fff;
+  background: #22242a;
+  color: #000;
 }
 
 .wrapper .sidebar{
