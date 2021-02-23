@@ -7,47 +7,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
   <link rel="shortcut icon" href="preloader/icon.ico" type="image/x-icon">
 	</head>
-	
-<script language="JavaScript">
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
-	
 	<body>
 
 		<!--wrapper start-->
@@ -120,6 +79,11 @@
 			<div class="main-container">
 				<div class="card">
 					<center><h3>📴 Official GSX IMEI Services 📴</h3></center>
+				</div>
+				<div class="card">
+					<h6>[Post Date] : 23 Feb 2021</h6>
+					<script async src="https://telegram.org/js/telegram-widget.js" data-telegram-post="iCrackOfficial/86" data-width="100%"></script>
+					<h6 style="text-align:right">[Post From] : iPhone13,4</h6>
 				</div>
 				<div class="card">
 					<h6>[Post Date] : 22 Feb 2021</h6>
