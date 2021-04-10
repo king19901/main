@@ -1,2 +1,1 @@
-You're at wrong place
-Nice Try...
+Don't poke in my shit, else i fuck your mom! asshole.
