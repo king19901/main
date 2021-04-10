@@ -1,0 +1,80 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Buy With MoneyGram</title>
+    <link rel="stylesheet" href="buy/before-continue.css">
+	<link rel="shortcut icon" href="buy/icon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+ <script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+  
+  <body>
+    <div class="wrapper">
+	<img src="buy/icon.ico">
+      <div class="text">Payment Details Required !</div>
+      <p>Before continue, contact admin for required payment details.</p>
+      <div class="btns">
+        <a href="https://t.me/iCrackBot">Contact</a>
+        <a href="http://global.moneygram.com">Continue ></a>
+      </div>
+    </div>
+
+    <script>
+    const buttons = document.querySelectorAll("a");
+    buttons.forEach((button) => {
+      button.onclick = function(e){
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        let ripple = document.createElement("span");
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        this.appendChild(ripple);
+        setTimeout(function(){
+          ripple.remove();
+        }, 600); // 1second = 1000ms
+      }
+    });
+
+    </script>
+
+  </body>
+</html>

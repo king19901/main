@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Buy With GlobePay</title>
+	<link rel="stylesheet" type="text/css" href="buy/globepay.css">
+	<link rel="shortcut icon" href="buy/icon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+
+<body>
+<div class="form">
+<img src="buy/globepay.png">
+	<form name="One-timeDonate" id="One-timeDonate" action="http://www.globepayinc.com/make_payment.php" target="_blank" method="post">
+		<input type="hidden" name="button_type" id="button_type" value="donation" />
+		<input type="hidden" name="item_name" id="item_name" value="One-time Donation"  />
+		<input type="hidden" name="item_id" id="item_id" value="Donate"  />
+		<select name="price" id="price">
+		<option value="">Select App Version</option>
+		<option value="499">iCrack Advance : 499$</option>
+		<option value="699">iCrack Pro : 699$</option>
+		<option value="1199">iCrack Ultimate : 1199$</option>
+		</select><br>
+		<p></P>
+		Custom Order<input type="text" name="other_price" id="other_price">
+		<input type="hidden" name="customer_details" id="customer_details" value=""  />
+		<input type="hidden" name="currency" id="currency" value="USD"  />
+		<input type="hidden" name="postage" id="postage" value=""  />
+		<input type="hidden" name="tax_rate" id="tax_rate" value=""  />
+		<input type="hidden" name="email_address" id="email_address" value="icrackofficial@icloud.com"  />
+		<p></P>
+		<a href="#" ><img src="buy/buy.png" onClick="javascript:document.getElementById('One-timeDonate').submit();" style="border:none" /></a>
+	</form>
+</div>
+</body>
+</html>
